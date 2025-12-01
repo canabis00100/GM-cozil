@@ -1,3 +1,4 @@
+import "../css/style.css";
 import auth from "./utils/auth";
 
 document.addEventListener("DOMContentLoaded", () => {
