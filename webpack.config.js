@@ -140,3 +140,10 @@ const config = {
   target: "web", // fix for "browserslist" error message
   stats: "errors-only", // suppress irrelevant log messages
 };
+
+// Forçar desabilitar cache em produção
+if (process.env.NODE_ENV === "production") {
+  config.cache = false;
+}
+
+module.exports = config;
