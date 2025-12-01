@@ -11,8 +11,8 @@ import Dropzone from "dropzone";
 import chart01 from "./components/charts/chart-01";
 import chart02 from "./components/charts/chart-02";
 import chart03 from "./components/charts/chart-03";
-import chart04 from "./components/charts/chart-04";
-import chart05 from "./components/charts/chart-05";
+// import chart04 from "./components/charts/chart-04"; // Removido - não usado
+// import chart05 from "./components/charts/chart-05"; // Removido - não usado
 import chart06 from "./components/charts/chart-06";
 import chart07 from "./components/charts/chart-07";
 import chart08 from "./components/charts/chart-08";
@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
   chart01();
   chart02();
   chart03();
-  chart04();
-  chart05();
+  // chart04(); // Removido - não usado
+  // chart05(); // Removido - não usado
   chart06();
   chart07();
   chart08();
