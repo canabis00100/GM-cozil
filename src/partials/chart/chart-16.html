@@ -1,0 +1,46 @@
+<div
+  class="rounded-2xl border border-gray-200 bg-white px-5 pb-5 pt-5 shadow-sm dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6"
+>
+  <div class="flex items-center justify-between mb-4">
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
+        Duração Estimada do Estoque
+      </h3>
+      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        Tempo estimado até o ponto de pedido
+      </p>
+    </div>
+    <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
+      <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Gauge Chart -->
+  <div class="flex flex-col items-center justify-center mb-6">
+    <div id="chartSixteen" class="w-full max-w-[300px]"></div>
+    <div class="mt-4 text-center">
+      <p id="chartSixteen-message" class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+        Estoque suficiente para os próximos dias.
+      </p>
+    </div>
+  </div>
+
+  <!-- Métricas no rodapé -->
+  <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+    <div class="text-center">
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Estoque Mínimo</p>
+      <p id="chartSixteen-min" class="text-sm font-semibold text-gray-800 dark:text-white/90">500</p>
+    </div>
+    <div class="text-center">
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Estoque Atual</p>
+      <p id="chartSixteen-current" class="text-sm font-semibold text-gray-800 dark:text-white/90">1.250</p>
+    </div>
+    <div class="text-center">
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Duração</p>
+      <p id="chartSixteen-duration" class="text-sm font-semibold text-gray-800 dark:text-white/90">37 dias</p>
+    </div>
+  </div>
+</div>
+

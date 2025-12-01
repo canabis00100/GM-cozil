@@ -1,0 +1,97 @@
+<!-- Informações Detalhadas do Produto (Modo Individual) -->
+<div
+  id="product-info-container"
+  class="overflow-hidden rounded-2xl border border-gray-200 bg-white px-5 pt-5 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6"
+>
+  <div class="flex items-center justify-between mb-4">
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
+      Informações do Produto
+    </h3>
+  </div>
+
+  <!-- Modo Global -->
+  <div id="product-info-global" class="space-y-4">
+    <div class="text-center py-8">
+      <svg
+        class="mx-auto h-12 w-12 text-gray-400"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+      </svg>
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+        Digite um código de produto na barra de pesquisa para ver informações detalhadas
+      </p>
+    </div>
+  </div>
+
+  <!-- Modo Individual -->
+  <div id="product-info-individual" class="hidden space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Código</p>
+        <p id="prod-codigo" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Categoria</p>
+        <p id="prod-categoria" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Estoque</p>
+        <p id="prod-estoque" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Comprometido</p>
+        <p id="prod-comprometido" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Disponível</p>
+        <p id="prod-disponivel" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Ponto de Pedido</p>
+        <p id="prod-ponto-pedido" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Valor Unitário</p>
+        <p id="prod-valor" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">Duração Estimada</p>
+        <p id="prod-duracao" class="text-sm font-semibold text-gray-800 dark:text-white/90 mt-1">-</p>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 dark:border-gray-800 pt-4">
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Fornecedor</p>
+      <div id="prod-fornecedor-info" class="space-y-2">
+        <p id="prod-fornecedor-nome" class="text-sm font-semibold text-gray-800 dark:text-white/90">-</p>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div>
+            <span class="text-gray-500 dark:text-gray-400">Pontualidade:</span>
+            <span id="prod-fornecedor-pontualidade" class="ml-1 font-medium text-gray-800 dark:text-white/90">-</span>
+          </div>
+          <div>
+            <span class="text-gray-500 dark:text-gray-400">Tempo Médio:</span>
+            <span id="prod-fornecedor-tempo" class="ml-1 font-medium text-gray-800 dark:text-white/90">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 dark:border-gray-800 pt-4">
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Status</p>
+      <div class="flex gap-2">
+        <span id="prod-status-solicitacao" class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"></span>
+        <span id="prod-status-pedido" class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"></span>
+      </div>
+    </div>
+  </div>
+</div>
+

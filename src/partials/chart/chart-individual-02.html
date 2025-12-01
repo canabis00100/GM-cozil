@@ -1,0 +1,41 @@
+<div
+  class="rounded-2xl border border-gray-200 bg-white px-5 pb-4 pt-4 shadow-sm dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-5"
+>
+  <div class="mb-1 flex items-center justify-between">
+    <div>
+      <h3 class="text-base font-semibold text-gray-800 dark:text-white/90">
+        Crescimento de Consumo
+      </h3>
+      <p class="text-xs text-gray-500 dark:text-gray-400">
+        Variação do consumo mensal
+      </p>
+    </div>
+    <div class="flex gap-2">
+      <button class="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
+        View More
+      </button>
+      <button class="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
+        Delete
+      </button>
+    </div>
+  </div>
+  <div class="mb-2">
+    <h4 id="chart-individual-02-value" class="text-2xl font-bold text-gray-800 dark:text-white/90 leading-tight">0</h4>
+    <p id="chart-individual-02-change" class="text-xs text-gray-500 dark:text-gray-400 leading-tight">
+      +0% que na semana passada
+    </p>
+  </div>
+  <!-- Card Informativo -->
+  <div class="mb-2 rounded-lg bg-gray-50 dark:bg-gray-800/50 p-2 border border-gray-200 dark:border-gray-700">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-success-500"></div>
+        <span class="text-xs text-gray-600 dark:text-gray-400">Status:</span>
+        <span id="chart-individual-02-status" class="text-xs font-medium text-gray-800 dark:text-white/90">Crescendo</span>
+      </div>
+      <span id="chart-individual-02-trend" class="text-xs font-medium text-success-600 dark:text-success-400">↑ Crescimento</span>
+    </div>
+  </div>
+  <div id="chartIndividual02" class="h-[100px]"></div>
+</div>
+
