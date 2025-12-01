@@ -43,6 +43,8 @@ const generateHTMLPlugins = () =>
       favicon: `./src/images/favicon.ico`,
       inject: "body",
       chunks,
+      // Incluir CSS correspondente ao chunk
+      chunksSortMode: "manual",
     });
   });
 
@@ -128,8 +130,8 @@ const config = {
   plugins: [
     ...generateHTMLPlugins(),
     new MiniCssExtractPlugin({
-      filename: "style.css",
-      chunkFilename: "style.css",
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
   ],
   output: {
