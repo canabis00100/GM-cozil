@@ -47,8 +47,13 @@ const generateHTMLPlugins = () =>
   });
 
 module.exports = {
-  mode: process.env.NODE_ENV || "development",
-  cache: false, // Desabilitar cache para evitar problemas no Render
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  cache: {
+    type: "filesystem",
+    buildDependencies: {
+      config: [__filename],
+    },
+  },
   entry: {
     main: "./src/js/index.js",
     signin: "./src/js/signin.js",
@@ -96,6 +101,14 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(mp4|mov|avi)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "videos/[name][ext]",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
