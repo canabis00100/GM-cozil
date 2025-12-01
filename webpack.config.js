@@ -48,8 +48,14 @@ const generateHTMLPlugins = () =>
 
 const config = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  // Desabilitar cache completamente - usar objeto vazio para forçar desabilitar
-  cache: process.env.NODE_ENV === "production" ? false : { type: "memory" },
+  // Configurar cache filesystem com diretório temporário para evitar erros
+  cache: {
+    type: "filesystem",
+    buildDependencies: {
+      config: [__filename],
+    },
+    cacheDirectory: path.resolve(__dirname, ".temp_cache"),
+  },
   entry: {
     main: "./src/js/index.js",
     signin: "./src/js/signin.js",

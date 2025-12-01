@@ -10,3 +10,4 @@ dist/
 *.mp4
 *.mov
 *.avi
+.temp_cache/
