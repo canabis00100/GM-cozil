@@ -2,7 +2,7 @@ services:
   - type: web
     name: gm-cozil-pcm
     env: node
-    buildCommand: npm install && npm run build:clean || npm run build
+    buildCommand: npm install && rm -rf build node_modules/.cache .cache && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
