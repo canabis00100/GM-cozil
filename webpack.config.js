@@ -143,6 +143,16 @@ const config = {
   },
   optimization: {
     minimize: process.env.NODE_ENV === "production",
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "style",
+          test: /\.css$/,
+          chunks: "all",
+          enforce: true,
+        },
+      },
+    },
   },
   resolve: {
     extensions: [".js", ".json"],
