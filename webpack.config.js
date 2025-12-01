@@ -48,7 +48,8 @@ const generateHTMLPlugins = () =>
 
 const config = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  cache: false, // Desabilitar cache completamente
+  // Desabilitar cache completamente - usar objeto vazio para forçar desabilitar
+  cache: process.env.NODE_ENV === "production" ? false : { type: "memory" },
   entry: {
     main: "./src/js/index.js",
     signin: "./src/js/signin.js",
