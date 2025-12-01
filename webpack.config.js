@@ -128,11 +128,12 @@ const config = {
     ],
   },
   plugins: [
-    ...generateHTMLPlugins(),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "style.css",
       chunkFilename: "[id].css",
+      ignoreOrder: true,
     }),
+    ...generateHTMLPlugins(),
   ],
   output: {
     filename: "[name].bundle.js",
