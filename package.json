@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack serve --open --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "WEBPACK_CACHE_DISABLED=true webpack --mode production --config webpack.config.js --no-cache",
     "build:clean": "rm -rf build node_modules/.cache .cache && npm run build",
     "sort": "npx prettier --write src"
   },
