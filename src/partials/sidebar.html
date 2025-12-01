@@ -133,9 +133,9 @@
           <li>
             <a
               href="#"
-              @click.prevent="selected = (selected === 'Forms' ? '':'Forms')"
-              class="menu-item group"
-              :class=" (selected === 'Forms') || (page === 'formElements' || page === 'formLayout' || page === 'proFormElements' || page === 'proFormLayout') ? 'menu-item-active' : 'menu-item-inactive'"
+              @click.prevent
+              class="menu-item group opacity-60 cursor-not-allowed pointer-events-none"
+              :class="'menu-item-inactive'"
             >
               <svg
                 :class="(selected === 'Forms') || (page === 'formElements' || page === 'formLayout' || page === 'proFormElements' || page === 'proFormLayout') ? 'menu-item-icon-active'  :'menu-item-icon-inactive'"
@@ -161,45 +161,23 @@
               </span>
 
               <svg
-                class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
-                :class="[(selected === 'Forms') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive', sidebarToggle ? 'lg:hidden' : '' ]"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
+                class="absolute right-2.5 top-1/2 -translate-y-1/2 fill-current text-gray-400"
+                :class="sidebarToggle ? 'lg:hidden' : ''"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
-                  stroke=""
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 1.5C9.92893 1.5 8.25 3.17893 8.25 5.25V9.75C8.25 11.8211 9.92893 13.5 12 13.5C14.0711 13.5 15.75 11.8211 15.75 9.75V5.25C15.75 3.17893 14.0711 1.5 12 1.5ZM9.75 5.25C9.75 4.00736 10.7574 3 12 3C13.2426 3 14.25 4.00736 14.25 5.25V9.75C14.25 10.9926 13.2426 12 12 12C10.7574 12 9.75 10.9926 9.75 9.75V5.25ZM6.75 9.75V5.25C6.75 2.35051 9.10051 0 12 0C14.8995 0 17.25 2.35051 17.25 5.25V9.75C17.25 10.1642 17.5858 10.5 18 10.5C18.4142 10.5 18.75 10.1642 18.75 9.75V5.25C18.75 1.52208 15.7279 -1.5 12 -1.5C8.27208 -1.5 5.25 1.52208 5.25 5.25V9.75C5.25 10.1642 5.58579 10.5 6 10.5C6.41421 10.5 6.75 10.1642 6.75 9.75ZM5.25 15C5.25 14.5858 5.58579 14.25 6 14.25H18C18.4142 14.25 18.75 14.5858 18.75 15V20.25C18.75 21.4926 17.7426 22.5 16.5 22.5H7.5C6.25736 22.5 5.25 21.4926 5.25 20.25V15ZM6.75 15.75V20.25C6.75 20.6642 7.08579 21 7.5 21H16.5C16.9142 21 17.25 20.6642 17.25 20.25V15.75H6.75Z"
+                  fill=""
                 />
               </svg>
             </a>
 
-            <!-- Dropdown Menu Start -->
-            <div
-              class="overflow-hidden transform translate"
-              :class="(selected === 'Forms') ? 'block' :'hidden'"
-            >
-              <ul
-                :class="sidebarToggle ? 'lg:hidden' : 'flex'"
-                class="flex flex-col gap-1 mt-2 menu-dropdown pl-9"
-              >
-                <li>
-                  <a
-                    href="form-elements.html"
-                    class="menu-dropdown-item group"
-                    :class="page === 'formElements' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
-                  >
-                    Form Elements
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Dropdown Menu End -->
           </li>
           <!-- Menu Item Forms -->
 
@@ -207,9 +185,9 @@
           <li>
             <a
               href="#"
-              @click.prevent="selected = (selected === 'Tables' ? '':'Tables')"
-              class="menu-item group"
-              :class="(selected === 'Tables') || (page === 'basicTables' || page === 'dataTables') ? 'menu-item-active' : 'menu-item-inactive'"
+              @click.prevent
+              class="menu-item group opacity-60 cursor-not-allowed pointer-events-none"
+              :class="'menu-item-inactive'"
             >
               <svg
                 :class="(selected === 'Tables') || (page === 'basicTables' || page === 'dataTables') ? 'menu-item-icon-active'  :'menu-item-icon-inactive'"
@@ -235,45 +213,23 @@
               </span>
 
               <svg
-                class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
-                :class="[(selected === 'Tables') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive', sidebarToggle ? 'lg:hidden' : '' ]"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
+                class="absolute right-2.5 top-1/2 -translate-y-1/2 fill-current text-gray-400"
+                :class="sidebarToggle ? 'lg:hidden' : ''"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
-                  stroke=""
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 1.5C9.92893 1.5 8.25 3.17893 8.25 5.25V9.75C8.25 11.8211 9.92893 13.5 12 13.5C14.0711 13.5 15.75 11.8211 15.75 9.75V5.25C15.75 3.17893 14.0711 1.5 12 1.5ZM9.75 5.25C9.75 4.00736 10.7574 3 12 3C13.2426 3 14.25 4.00736 14.25 5.25V9.75C14.25 10.9926 13.2426 12 12 12C10.7574 12 9.75 10.9926 9.75 9.75V5.25ZM6.75 9.75V5.25C6.75 2.35051 9.10051 0 12 0C14.8995 0 17.25 2.35051 17.25 5.25V9.75C17.25 10.1642 17.5858 10.5 18 10.5C18.4142 10.5 18.75 10.1642 18.75 9.75V5.25C18.75 1.52208 15.7279 -1.5 12 -1.5C8.27208 -1.5 5.25 1.52208 5.25 5.25V9.75C5.25 10.1642 5.58579 10.5 6 10.5C6.41421 10.5 6.75 10.1642 6.75 9.75ZM5.25 15C5.25 14.5858 5.58579 14.25 6 14.25H18C18.4142 14.25 18.75 14.5858 18.75 15V20.25C18.75 21.4926 17.7426 22.5 16.5 22.5H7.5C6.25736 22.5 5.25 21.4926 5.25 20.25V15ZM6.75 15.75V20.25C6.75 20.6642 7.08579 21 7.5 21H16.5C16.9142 21 17.25 20.6642 17.25 20.25V15.75H6.75Z"
+                  fill=""
                 />
               </svg>
             </a>
 
-            <!-- Dropdown Menu Start -->
-            <div
-              class="overflow-hidden transform translate"
-              :class="(selected === 'Tables') ? 'block' :'hidden'"
-            >
-              <ul
-                :class="sidebarToggle ? 'lg:hidden' : 'flex'"
-                class="flex flex-col gap-1 mt-2 menu-dropdown pl-9"
-              >
-                <li>
-                  <a
-                    href="basic-tables.html"
-                    class="menu-dropdown-item group"
-                    :class="page === 'basicTables' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
-                  >
-                    Basic Tables
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Dropdown Menu End -->
           </li>
           <!-- Menu Item Tables -->
 
@@ -281,9 +237,9 @@
           <li>
             <a
               href="#"
-              @click.prevent="selected = (selected === 'Pages' ? '':'Pages')"
-              class="menu-item group"
-              :class="(selected === 'Pages') || (page === 'fileManager' || page === 'pricingTables' || page === 'blank' || page === 'page404' || page === 'page500' || page === 'page503' || page === 'success' || page === 'faq' || page === 'comingSoon' || page === 'maintenance') ? 'menu-item-active' : 'menu-item-inactive'"
+              @click.prevent
+              class="menu-item group opacity-60 cursor-not-allowed pointer-events-none"
+              :class="'menu-item-inactive'"
             >
               <svg
                 :class="(selected === 'Pages') || (page === 'fileManager' || page === 'pricingTables' || page === 'blank' || page === 'page404' || page === 'page500' || page === 'page503' || page === 'success' || page === 'faq' || page === 'comingSoon' || page === 'maintenance') ? 'menu-item-icon-active'  :'menu-item-icon-inactive'"
@@ -309,54 +265,23 @@
               </span>
 
               <svg
-                class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
-                :class="[(selected === 'Pages') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive', sidebarToggle ? 'lg:hidden' : '' ]"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
+                class="absolute right-2.5 top-1/2 -translate-y-1/2 fill-current text-gray-400"
+                :class="sidebarToggle ? 'lg:hidden' : ''"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
-                  stroke=""
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 1.5C9.92893 1.5 8.25 3.17893 8.25 5.25V9.75C8.25 11.8211 9.92893 13.5 12 13.5C14.0711 13.5 15.75 11.8211 15.75 9.75V5.25C15.75 3.17893 14.0711 1.5 12 1.5ZM9.75 5.25C9.75 4.00736 10.7574 3 12 3C13.2426 3 14.25 4.00736 14.25 5.25V9.75C14.25 10.9926 13.2426 12 12 12C10.7574 12 9.75 10.9926 9.75 9.75V5.25ZM6.75 9.75V5.25C6.75 2.35051 9.10051 0 12 0C14.8995 0 17.25 2.35051 17.25 5.25V9.75C17.25 10.1642 17.5858 10.5 18 10.5C18.4142 10.5 18.75 10.1642 18.75 9.75V5.25C18.75 1.52208 15.7279 -1.5 12 -1.5C8.27208 -1.5 5.25 1.52208 5.25 5.25V9.75C5.25 10.1642 5.58579 10.5 6 10.5C6.41421 10.5 6.75 10.1642 6.75 9.75ZM5.25 15C5.25 14.5858 5.58579 14.25 6 14.25H18C18.4142 14.25 18.75 14.5858 18.75 15V20.25C18.75 21.4926 17.7426 22.5 16.5 22.5H7.5C6.25736 22.5 5.25 21.4926 5.25 20.25V15ZM6.75 15.75V20.25C6.75 20.6642 7.08579 21 7.5 21H16.5C16.9142 21 17.25 20.6642 17.25 20.25V15.75H6.75Z"
+                  fill=""
                 />
               </svg>
             </a>
 
-            <!-- Dropdown Menu Start -->
-            <div
-              class="overflow-hidden transform translate"
-              :class="(selected === 'Pages') ? 'block' :'hidden'"
-            >
-              <ul
-                :class="sidebarToggle ? 'lg:hidden' : 'flex'"
-                class="flex flex-col gap-1 mt-2 menu-dropdown pl-9"
-              >
-                <li>
-                  <a
-                    href="blank.html"
-                    class="menu-dropdown-item group"
-                    :class="page === 'blank' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
-                  >
-                    Blank Page
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="404.html"
-                    class="menu-dropdown-item group"
-                    :class="page === 'page404' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
-                  >
-                    404 Error
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Dropdown Menu End -->
           </li>
           <!-- Menu Item Pages -->
         </ul>
