@@ -48,12 +48,8 @@ const generateHTMLPlugins = () =>
 
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  cache: {
-    type: "filesystem",
-    buildDependencies: {
-      config: [__filename],
-    },
-  },
+  // Desabilitar cache completamente para evitar problemas no Render
+  cache: false,
   entry: {
     main: "./src/js/index.js",
     signin: "./src/js/signin.js",

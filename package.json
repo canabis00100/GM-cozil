@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack serve --open --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --mode production --config webpack.config.js",
     "sort": "npx prettier --write src"
   },
   "keywords": [],
